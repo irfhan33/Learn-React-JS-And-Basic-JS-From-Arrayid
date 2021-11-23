@@ -34,8 +34,8 @@
       //     React.createElement("li", null, "Jeruk")
       //   );
 
-      function hello(name) {
-        return <p>nama saya {name} </p>;
+      function hurufbesar(text) {
+        return text.toUpperCase();
       }
       const teselement = (
         <ul>
@@ -46,15 +46,10 @@
       );
 
       const nama = "Irvan";
-      const element = (
-        <>
-          {hello("budi")}
-          {hello("rahmad")}
-          {hello("budi")}
-        </>
-      );
+      const element2 = <h1>Halo Nama Saya {hurufbesar(nama)}</h1>;
+
       ReactDOM.render(teselement, tes);
-      ReactDOM.render(element, root);
+      ReactDOM.render(element2, root);
     </script>
   </body>
 </html>
