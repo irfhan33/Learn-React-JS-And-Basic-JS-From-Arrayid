@@ -34,8 +34,8 @@
       //     React.createElement("li", null, "Jeruk")
       //   );
 
-      function Hello(props) {
-        return <p>nama saya {props.name} </p>;
+      function hello(name) {
+        return <p>nama saya {name} </p>;
       }
       const teselement = (
         <ul>
@@ -48,9 +48,9 @@
       const nama = "Irvan";
       const element = (
         <>
-          <Hello name="Irvan" />
-          <Hello name="Paldi" />
-          <Hello name="Ikky" />
+          {hello("budi")}
+          {hello("rahmad")}
+          {hello("budi")}
         </>
       );
       ReactDOM.render(teselement, tes);
