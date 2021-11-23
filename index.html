@@ -7,8 +7,9 @@
     <title>Document</title>
   </head>
   <body>
+    <div id="tes"></div>
     <div id="root"></div>
-
+    <div id="output"></div>
     <!-- Load Babel -->
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
     <!-- Your custom script here -->
@@ -23,6 +24,7 @@
 
     <script type="text/babel">
       const root = document.querySelector("#root");
+      const tes = document.querySelector("#tes");
 
       //   const element = React.createElement(
       //     "ul",
@@ -32,22 +34,27 @@
       //     React.createElement("li", null, "Jeruk")
       //   );
 
-      function jam() {
-        const element = (
-          <div>
-            <h1> Sekarang Jam</h1>
-            {new Date().toLocaleTimeString()}
-          </div>
-        );
-
-        ReactDOM.render(element, root);
+      function Hello(props) {
+        return <p>nama saya {props.name} </p>;
       }
+      const teselement = (
+        <ul>
+          <li>1</li>
+          <li>2</li>
+          <li>3</li>
+        </ul>
+      );
 
-      jam();
-
-      setInterval(function () {
-        jam();
-      }, 1000);
+      const nama = "Irvan";
+      const element = (
+        <>
+          <Hello name="Irvan" />
+          <Hello name="Paldi" />
+          <Hello name="Ikky" />
+        </>
+      );
+      ReactDOM.render(teselement, tes);
+      ReactDOM.render(element, root);
     </script>
   </body>
 </html>
